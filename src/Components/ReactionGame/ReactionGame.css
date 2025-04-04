@@ -1,0 +1,854 @@
+ /* Full Page Centering */
+ .form-wrapperr {
+  display: flex;
+  top: 10%;  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: white;
+}
+
+/* Form Box */
+.form-containerr {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 700px;
+  height: 500px;
+}
+
+/* Title */
+.form-titler {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Default Input, Select, and Textarea Styles */
+.inputr, 
+selectr, 
+textarear {
+  width: 95%; 
+  padding: 16px;
+  margin-bottom: 15px;
+  border: 2px solid #ff007f;
+  border-radius: 10px;
+  font-size: 20px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus Effect - Pink Border */
+.inputr:focus, 
+selectr:focus, 
+textarear:focus {
+  border: 1px solid #ff007f !important;
+  box-shadow: 0 0 8px rgba(255, 0, 127, 0.5);
+}
+
+/* Submit Button (Pink Gradient) */
+.submit-buttonr {
+  width: 100%;
+  padding: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right, #ff007f, #ff4da6);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.submit-buttonr:hover {
+  background: linear-gradient(to right, #e60073, #ff3385);
+  transform: scale(1.05);
+}
+
+/* Reaction Game Layout */
+.containerr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Stopwatch Display */
+.stopwatch-display {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #ff007f;
+}
+
+/* Buttons */
+.start-buttonr {
+  background-color: blue;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.try-again-buttonr {
+  background-color: orange;
+  color: white;
+  padding: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.exit-buttonr {
+  background-color: red;
+  color: white;
+  padding: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* Game Area */
+.game-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Items stacked vertically */
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full screen height */
+}
+
+/* Default Circle Styles */
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Red and Green Circles */
+.circle.red {
+  background-color: red;
+}
+
+.circle.green {
+  background-color: green;
+}
+
+/* Reaction Timer, Countdown, and Wrong Click Styles */
+.reaction-timer, .countdown, .wrong-click {
+  margin-top: 20px; /* Space below the circle */
+  font-size: 30px;
+  color: #1e1e1e;
+  text-align: center;
+}
+
+/* Responsive Circle Sizing */
+@media (max-width: 1024px) {
+  .circle {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .circle {
+    width: 120px;
+    height: 120px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .circle {
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+  }
+}
+
+/* Responsive Text Size */
+@media (max-width: 768px) {
+  .reaction-timer, .countdown, .wrong-click {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reaction-timer, .countdown, .wrong-click {
+    font-size: 20px;
+  }
+}
+
+/* Enlarged Result Box */
+.result-containerr {
+  background: white;
+  padding: 40px;
+  width: 700px;
+  height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #1e1e1e;
+}
+
+/* Enlarged Result Text */
+.result-containerr h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1e1e1e;
+}
+
+/* Enlarged Attempt List */
+.result-containerr ul {
+  list-style: none;
+  padding: 0;
+  font-size: 22px;
+  color: #1e1e1e;
+}
+
+/* Super 3D Start Button */
+.start-buttonr {
+  background: linear-gradient(to right, #ff007f, #ff4da6);
+  color: white;
+  padding: 20px 50px;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 15px 35px rgba(255, 0, 127, 0.6);
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+  text-align: center;
+}
+
+/* Neon Glow Effect */
+.start-buttonr::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 120%;
+  height: 120%;
+  background: rgba(255, 0, 127, 0.5);
+  filter: blur(20px);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+/* Hover Effect on Start Button */
+.start-buttonr:hover {
+  background: linear-gradient(to right, #e60073, #ff3385);
+  transform: scale(1.1);
+  box-shadow: 0 30px 50px rgba(255, 0, 127, 0.7);
+}
+#howToPlay {
+  background-color: #1e1e1e;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.title h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.title p {
+  color: #bbbbbb;
+  max-width: 600px;
+  margin: 10px auto 40px;
+ 
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.step {
+  background: #262626;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin: 0 auto 15px;
+}
+
+.blue {
+  background: #2e3192;
+}
+
+.pink {
+  background: #ff4081;
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.step p {
+  color: #bbbbbb;
+  font-size: 1rem;
+}
+
+.pro-tips {
+  background: #262626;
+  padding: 20px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.pro-tips h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.pro-tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pro-tips li {
+  display: flex;
+  align-items: center;
+  color: #bbbbbb;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.bullet {
+  width: 8px;
+  height: 8px;
+  background: #ff4081;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .steps {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.start-buttonrr {
+  margin-top: 20px; 
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.start-buttonrr:hover {
+  background-color: #ff4081;
+}
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Result Container */
+.result-containerr {
+  display: flex;
+  bottom: 0;
+  justify-content: space-between;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.result-containerr h2 {
+  margin-top: 40px; /* Add 20px top margin */
+}
+
+.result-left, .result-right {
+  width: 48%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.result-left {
+  border-right: 2px solid black;
+}
+
+.result-left ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.result-left li {
+  margin-bottom: 10px;
+}
+
+.try-again-buttonr, .exit-buttonr {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.try-again-buttonr:hover, .exit-buttonr:hover {
+  background-color: #333;
+}
+
+.leaderboard-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 900px;
+  margin-bottom: 50px;
+  text-align: center;
+  
+ 
+}
+
+
+
+.leaderboard-title {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+.header-cell {
+  background-color: #f8f9fa;
+  color: #495057;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+}
+
+.header-cell:last-child {
+  border-right: none;
+}
+
+.data-cell {
+  padding: 10px 12px;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
+}
+
+.data-cell:last-child {
+  border-right: none;
+}
+
+.highlight-row {
+  background-color: #fff9e6;
+  font-weight: 500;
+}
+
+.highlight-row .data-cell {
+  border-bottom: 1px solid #ffeeba;
+}
+
+.you-badge {
+  color: #1976d2;
+  font-size: 0.85em;
+  margin-left: 5px;
+}
+
+.separator-line {
+  text-align: center;
+  color: #adb5bd;
+  font-size: 1em;
+  padding: 5px 0;
+  background-color: #f8f9fa;
+  letter-spacing: 3px;
+}
+
+.loading-message,
+.error-message {
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+.error-message {
+  color: #dc3545;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .form-containerr, .result-containerr {
+    width: 90%;
+    height: auto;
+    padding: 30px;
+  }
+
+  .stopwatch-display {
+    font-size: 24px;
+  }
+
+  .circle {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .form-containerr, .result-containerr {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .form-titler {
+    font-size: 24px;
+  }
+
+  .inputr, selectr, textarear {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .submit-buttonr, .try-again-buttonr, .exit-buttonr {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .stopwatch-display {
+    font-size: 20px;
+  }
+
+  .steps {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+    font-size: 18px;
+  }
+}
+
+/* For very small mobile screens */
+@media (max-width: 480px) {
+  .form-titler {
+    font-size: 20px;
+  }
+
+  .inputr, selectr, textarear {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .submit-buttonr, .try-again-buttonr, .exit-buttonr {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .stopwatch-display {
+    font-size: 18px;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+  }
+
+  .leaderboard {
+    max-height: 300px;
+  }
+}
+
+.remaining-attempts {
+  font-size: 24px;  /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  color: red;  /* Highlight in red */
+  text-align: center; /* Center align */
+  margin-top: 10px; /* Space from other elements */
+} .circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.circle.red {
+  background-color: red;
+}
+
+.circle.green {
+  background-color: green;
+}
+
+.circle[style*="null"] {
+  opacity: 0;
+  pointer-events: none; /* Disable clicks when the circle is hidden */
+}
+.game-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.game-container {
+  margin: 20px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.circle.red {
+  background-color: red;
+}
+
+.circle.green {
+  background-color: green;
+}
+
+.circle.hidden {
+  visibility: hidden;
+}
+
+.feedback {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+}
+
+.results-container {
+  text-align: center;
+}
+
+.instructions left instructions right{
+  color: #1e1e1e;
+}
+
+
+/* Game Layout */
+.game-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+/* Game Area */
+.game-container {
+  flex: 2;
+  min-width: 340px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Game Ball */
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+/* Ball Colors */
+.circle.red {
+  background-color: red;
+}
+
+.circle.green {
+  background-color: green;
+}
+
+/* Hide Ball */
+
+
+/* Ball Click Animation */
+
+
+/* Reaction Timer & Remaining Attempts */
+.reaction-timer,
+.remaining-attempts {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.remaining-attempts {
+  color: red; /* Highlight important info */
+}
+
+/* Instructions */
+.instructions {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.instructions.left, .instructions.right {
+  color: #1e1e1e;
+}
+
+
+
+/* Results Container */
+.results-container {
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .game-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .instructions {
+    width: 90%;
+  }
+
+  .game-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .game-layout {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .instructions {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .reaction-timer,
+  .remaining-attempts {
+    font-size: 18px;
+  }
+}
