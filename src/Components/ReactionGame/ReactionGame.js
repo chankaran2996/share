@@ -5,7 +5,7 @@ import Leaderboard from "./Leaderboard";
 import Login from "./Login";
 import Form from "./Form";
 
-const ReactionGame = () => {
+const ReactionGame = ({ email = "" }) => {
   const [page, setPage] = useState("");
   const [formData, setFormData] = useState({ name: "", email: "", age: "" });
   const [circleColor, setCircleColor] = useState("red");
@@ -30,8 +30,12 @@ const ReactionGame = () => {
       setPage("game");
       resetGame();
     }
+     if(page=="form"){
+      if(localStorage.getItem('name')!=="" && localStorage.getItem('email')!=="" && localStorage.getItem('age')!==""){
+        setPage("game")
+      }
     if(page=="game"){
-      if(localStorage.getItem('name')=="" || localStorage.getItem('email')=="" || localStorage.getItem('age')!==""){
+      if(localStorage.getItem('name')=="" || localStorage.getItem('email')=="" || localStorage.getItem('age')==""){
         setPage("fill")
       }
     }
